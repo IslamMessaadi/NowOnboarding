@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_307427_now_onb_0_Candidates Progress.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"/>
+	
+	<g:evaluate>
+        var candidates = new nowOnboardingUtils().getAllCandidate();
+    </g:evaluate> 
+
+	<section>
+		<div class="row d-flex justify-content-center">
+		  <div class="col-md-10 col-xl-8 text-center">
+			<h3 class="m-4">Candidates Overview List</h3>
+			<p class="mb-4 pb-2 mb-md-5 pb-md-0">
+			  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
+			  numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
+			  quisquam eum porro a pariatur veniam.
+			</p>
+		  </div>
+		</div>
+	  
+
+		<ul class="flex flex-row justify-content-around list-group" style="font-size: medium;">
+		
+		
+
+		<j:forEach var="jvar_candidate" items="${candidates}" indexVar="jvar_tr_index">     
+
+			<li class="list-group-item">
+				<div class="d-flex align-items-center">
+				  <img src="${jvar_candidate.userImg}" class="mr-3 rounded-circle" alt=""
+					style="width: 45px; height: 45px" />
+				  <div class="ms-3">
+					<p class="mb-1" style="font-weight: 600;">${jvar_candidate.user}</p>
+					<!--p class="text-muted mb-0">${jvar_candidate.program}</p-->
+				  </div>
+				</div>
+				<span class="badge rounded-pill badge-success">OnBoarding</span>
+				<span class="badge rounded-pill badge-info">35%</span>
+			</li>
+
+		</j:forEach> 
+
+		</ul>
+
+	</section>
+
+</j:jelly>]]></html>
+        <name>Candidates Progress</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-19 10:57:18</sys_created_on>
+        <sys_id>6e97fa1f97511110e300d200f153aff7</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>Candidates Progress</sys_name>
+        <sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope>
+        <sys_update_name>sys_ui_page_6e97fa1f97511110e300d200f153aff7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-21 12:40:18</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Onboarding">f8d166d797111110e300d200f153af33</application>
+        <file_path/>
+        <instance_id>01c7d3f4dbea841407072f17d4961976</instance_id>
+        <instance_name>dev97381</instance_name>
+        <name>sys_ui_page_6e97fa1f97511110e300d200f153aff7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script/&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_307427_now_onb_0_Candidates Progress.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+	&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"/&gt;
+	
+	&lt;g:evaluate&gt;
+        var candidates = new nowOnboardingUtils().getAllCandidate();
+    &lt;/g:evaluate&gt; 
+
+	&lt;section&gt;
+		&lt;div class="row d-flex justify-content-center"&gt;
+		  &lt;div class="col-md-10 col-xl-8 text-center"&gt;
+			&lt;h3 class="m-4"&gt;Candidates Overview List&lt;/h3&gt;
+			&lt;p class="mb-4 pb-2 mb-md-5 pb-md-0"&gt;
+			  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
+			  numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
+			  quisquam eum porro a pariatur veniam.
+			&lt;/p&gt;
+		  &lt;/div&gt;
+		&lt;/div&gt;
+	  
+
+		&lt;ul class="flex flex-row justify-content-around list-group" style="font-size: medium;"&gt;
+		
+		
+
+		&lt;j:forEach var="jvar_candidate" items="${candidates}" indexVar="jvar_tr_index"&gt;     
+
+			&lt;li class="list-group-item"&gt;
+				&lt;div class="d-flex align-items-center"&gt;
+				  &lt;img src="${jvar_candidate.userImg}" class="mr-3 rounded-circle" alt=""
+					style="width: 45px; height: 45px" /&gt;
+				  &lt;div class="ms-3"&gt;
+					&lt;p class="mb-1" style="font-weight: 600;"&gt;${jvar_candidate.user}&lt;/p&gt;
+					&lt;!--p class="text-muted mb-0"&gt;${jvar_candidate.program}&lt;/p--&gt;
+				  &lt;/div&gt;
+				&lt;/div&gt;
+				&lt;span class="badge rounded-pill badge-success"&gt;OnBoarding&lt;/span&gt;
+				&lt;span class="badge rounded-pill badge-info"&gt;35%&lt;/span&gt;
+			&lt;/li&gt;
+
+		&lt;/j:forEach&gt; 
+
+		&lt;/ul&gt;
+
+	&lt;/section&gt;
+
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;Candidates Progress&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-19 10:57:18&lt;/sys_created_on&gt;&lt;sys_id&gt;6e97fa1f97511110e300d200f153aff7&lt;/sys_id&gt;&lt;sys_mod_count&gt;27&lt;/sys_mod_count&gt;&lt;sys_name&gt;Candidates Progress&lt;/sys_name&gt;&lt;sys_package display_value="Now Onboarding" source="x_307427_now_onb_0"&gt;f8d166d797111110e300d200f153af33&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Onboarding"&gt;f8d166d797111110e300d200f153af33&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_6e97fa1f97511110e300d200f153aff7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-21 12:40:18&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>410957489</payload_hash>
+        <record_name>Candidates Progress</record_name>
+        <reverted_from/>
+        <source>49d166d797111110e300d200f153af35</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-21 12:40:18</sys_created_on>
+        <sys_id>fed26d0c97299110e300d200f153af9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182c06b12bb0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-21 12:40:18</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>3ad26d0cad299110aba7840d3dea869d</update_guid>
+        <update_guid_history>3ad26d0cad299110aba7840d3dea869d:410957489,50e16d480f29911027469b676001c1b1:-827859925,b1e021c8192991102b00437e5b595c91:-2062090635,f2a06188052991105d662a47045a2bc6:538701767,fdb46d37fb995110754d75d7f2b62438:856833461,6323adb3ed9951106bceb035555f2c59:-2011184384,30c2a1f3269951101e1ce7da81483b2c:-475417712,5992e5b3b599511036a638781f252bba:1042447779,006269b3b0995110b16e831a7152d864:-1456344799,6f2269b345995110363e0292bbfe9b5d:-737215135,5fe165b3f99951104af975475cd96636:-1456344799,a7d165b3ae9951105bb57f8a604dc830:-1218094827,62c161b317995110070783f13a9492d7:-2011184384,cb81e973d5995110d6ea4cf09961f4ca:-1456344799,9561ad733d995110a2c0735c0a0189a0:1951729642,a731253305995110a4c517bfc91122ff:-1252974845,d7cf553367995110722003251f4da744:1831732750,b87e51ffde595110ceda21ee3128423e:-445060850,f4cc41bff51951101b0aee96e6cc66e0:1973555969,ab2c5467f2d511104c44f81e50ab1cab:-226640023,815f535363151110965354d5d14c3060:725726680,77ce5353c11511106e61828ee1b5445b:-945333139,4bbe5bdf06d111101d66a96ccdac2e6d:741307852,efae1bdf66d111101f91bb18ecf9a55d:-180377462,a19edfdf32d11110377e1926605c4ebf:-465491182,f27e1313c5151110b8fd7a5ec37fdc25:1222796929,2ec8f69ff1511110f3213fe5f34ecb0f:2097714136,d2187edb9f5111109494f482c9c65745:1485384237</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-27 18:37:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>249282df17b44768a06a35ece600e841</sys_id>
+        <sys_metadata>6e97fa1f97511110e300d200f153aff7</sys_metadata>
+        <sys_name>Candidates Progress</sys_name>
+        <sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope>
+        <sys_scope_delete display_value="">2a2e9e1452574e349b8eafc3098c2649</sys_scope_delete>
+        <sys_update_name>sys_ui_page_6e97fa1f97511110e300d200f153aff7</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_6e97fa1f97511110e300d200f153aff7">fed26d0c97299110e300d200f153af9d</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

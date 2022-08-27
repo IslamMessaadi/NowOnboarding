@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
+    <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
+        <macroponent_config>{ }</macroponent_config>
+        <screen display_value="Landing Page Default">8d23c5370d195110ca1a026be2d7c76d</screen>
+        <sys_class_name>sys_uib_screen_test_values</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-20 16:04:38</sys_created_on>
+        <sys_id>0608c57b97195110e300d200f153afdd</sys_id>
+        <sys_name/>
+        <sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope>
+        <sys_update_name>sys_uib_screen_test_values_0608c57b97195110e300d200f153afdd</sys_update_name>
+    </sys_uib_screen_test_values>
+</record_update>

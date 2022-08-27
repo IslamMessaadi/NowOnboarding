@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-19 10:04:43</sys_created_on>
+        <sys_id>d41c6e1397511110e300d200f153af7c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_307427_now_onb_0_candidate.x_307427_now_onb_0.candidate_user</sys_name>
+        <sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope>
+        <sys_security_acl display_value="x_307427_now_onb_0_candidate">dc1c6e1397511110e300d200f153af79</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_d41c6e1397511110e300d200f153af7c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-19 10:04:43</sys_updated_on>
+        <sys_user_role display_value="x_307427_now_onb_0.candidate_user" name="x_307427_now_onb_0.candidate_user">041c6a5f97111110e300d200f153afb0</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Onboarding">f8d166d797111110e300d200f153af33</application>
+        <file_path/>
+        <instance_id>01c7d3f4dbea841407072f17d4961976</instance_id>
+        <instance_name>dev97381</instance_name>
+        <name>sys_security_acl_role_d41c6e1397511110e300d200f153af7c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-19 10:04:43</sys_created_on><sys_id>d41c6e1397511110e300d200f153af7c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_307427_now_onb_0_candidate.x_307427_now_onb_0.candidate_user</sys_name><sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package><sys_policy/><sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope><sys_security_acl display_value="x_307427_now_onb_0_candidate">dc1c6e1397511110e300d200f153af79</sys_security_acl><sys_update_name>sys_security_acl_role_d41c6e1397511110e300d200f153af7c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-19 10:04:43</sys_updated_on><sys_user_role display_value="x_307427_now_onb_0.candidate_user" name="x_307427_now_onb_0.candidate_user">041c6a5f97111110e300d200f153afb0</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>1406254067</payload_hash>
+        <record_name>x_307427_now_onb_0_candidate.x_307427_now_onb_0.candidate_user</record_name>
+        <reverted_from/>
+        <source>49d166d797111110e300d200f153af35</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-19 10:04:43</sys_created_on>
+        <sys_id>581c6e1397511110e300d200f153af7e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182b58fea370000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-19 10:04:43</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>901c6e13265111102e626b3ca28c817e</update_guid>
+        <update_guid_history>901c6e13265111102e626b3ca28c817e:1406254067</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_307427_now_onb_0_candidate.x_307427_now_onb_0.candidate_user">72ec2e5397511110e300d200f153afc0</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-19 10:08:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>03d7bb1ef9284a9683124a02f092f279</sys_id>
+        <sys_metadata>d41c6e1397511110e300d200f153af7c</sys_metadata>
+        <sys_name>x_307427_now_onb_0_candidate.x_307427_now_onb_0.candidate_user</sys_name>
+        <sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package>
+        <sys_parent display_value="x_307427_now_onb_0_candidate">dc1c6e1397511110e300d200f153af79</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope>
+        <sys_scope_delete display_value="">2a2e9e1452574e349b8eafc3098c2649</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_d41c6e1397511110e300d200f153af7c</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_d41c6e1397511110e300d200f153af7c">581c6e1397511110e300d200f153af7e</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

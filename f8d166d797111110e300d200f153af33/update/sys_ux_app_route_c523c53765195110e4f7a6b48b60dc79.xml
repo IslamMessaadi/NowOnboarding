@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config/>
+        <description/>
+        <extension_point/>
+        <fields>sysId,table,approvalId</fields>
+        <icon/>
+        <name>Record Page(task)</name>
+        <optional_parameters>newId</optional_parameters>
+        <order>0</order>
+        <parent_macroponent display_value="Portal App Shell">b66bf1075b31101016fd7c1bf481c7a7</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>rec_task</route_type>
+        <screen_type display_value="Record Page(task)">8123c53710195110327fa2b204283b7a</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-08-20 15:43:19</sys_created_on>
+        <sys_id>c523c53765195110e4f7a6b48b60dc79</sys_id>
+        <sys_name>Record Page(task)</sys_name>
+        <sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope>
+        <sys_update_name>sys_ux_app_route_c523c53765195110e4f7a6b48b60dc79</sys_update_name>
+    </sys_ux_app_route>
+    <sys_translated_text action="delete_multiple" query="documentkey=c523c53765195110e4f7a6b48b60dc79"/>
+</record_update>

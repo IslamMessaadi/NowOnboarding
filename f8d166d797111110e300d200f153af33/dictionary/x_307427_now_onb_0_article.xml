@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="57cd2a9397511110e300d200f153afee" label="Article" max_length="40" name="x_307427_now_onb_0_article" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Content" max_length="8000" name="content" type="html"/>
+        <element label="External Reference" max_length="1024" name="external_reference" type="url"/>
+        <element label="Knowledge base" max_length="32" name="knowledge_base" reference="kb_knowledge" reference_qual="active=true^workflow_state=published^EQ" reference_qual_condition="active=true^workflow_state=published^EQ" type="reference"/>
+        <element label="Name" mandatory="true" max_length="150" name="name" type="string"/>
+        <element label="Short Description" max_length="1000" name="short_description" type="string"/>
+        <element label="Team Topic" mandatory="true" max_length="32" name="team_topic" reference="x_307427_now_onb_0_team" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <index name="index">
+            <element name="knowledge_base"/>
+        </index>
+        <index name="index2">
+            <element name="team_topic"/>
+        </index>
+    </element>
+</database>

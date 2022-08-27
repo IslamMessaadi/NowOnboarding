@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_307427_now_onb_0.nowOnboardingUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>nowOnboardingUtils</name>
+        <script><![CDATA[var nowOnboardingUtils = Class.create();
+nowOnboardingUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+    getTrackArticles: function(){
+        var that= this;
+        var articles= [];
+        var cndGr= this.getUserProgram();
+        if(!cndGr) return;
+        var programList= cndGr.getValue("program").split(",");
+        if(programList.length){
+            programList.forEach(function(team) {
+                var grArt = new GlideRecord("x_307427_now_onb_0_article");
+                grArt.addEncodedQuery("team_topic=" + team);
+                grArt.query();
+                while (grArt.next()) {
+                    articles.push({name:grArt.getValue("name"), topic: grArt.team_topic.getDisplayValue(),
+                    sys_id:grArt.getValue("sys_id"), isdone: that.isTopicDone(grArt.getValue("name"))});
+                }
+            });
+        }
+        
+        return articles;
+    },
+
+    //"b6826bf03710200044e0bfc8bcbe5df8" gs.getUserID()
+    getUserProgram: function(){
+        var ftgr = new GlideRecord("x_307427_now_onb_0_candidate");
+        ftgr.addQuery("user", gs.getUserID());
+        ftgr.query();
+        if (ftgr.next()) {
+           return ftgr;
+        }
+        return null;
+    },
+
+    getUserProgramName: function(){
+        var that= this;
+        var plist=[];
+        var pStrList=[];
+        var ftgr = new GlideRecord("x_307427_now_onb_0_candidate");
+        ftgr.addQuery("user", gs.getUserID());
+        ftgr.query();
+        if (ftgr.next()) {
+         plist= ftgr.getValue("program").split(",");
+        }
+        
+        if(plist.length){
+            plist.forEach(function(pid){
+                pStrList.push(that.getProgramName(pid));
+            });
+        }
+
+        return pStrList.join(" | ");
+    },
+
+    getUserProgramNameA: function(userId){
+        var that= this;
+        var plist=[];
+        var pStrList=[];
+        var ftgr = new GlideRecord("x_307427_now_onb_0_candidate");
+        ftgr.addQuery("user", userId);
+        ftgr.query();
+        if (ftgr.next()) {
+         plist= ftgr.getValue("program").split(",");
+        }
+        
+        if(plist.length){
+            plist.forEach(function(pid){
+                pStrList.push(that.getProgramName(pid));
+            });
+        }
+
+        return pStrList.join(" | ");
+    },
+
+    getProgramName:function(programId){
+        var grPr = new GlideRecord("x_307427_now_onb_0_team");
+        grPr.get(programId);
+        grPr.query();
+        if (grPr.isValidRecord()) {
+           return grPr.getValue("title");
+        }
+        return "";
+    },
+
+    getProgremDetail:function(){
+        var ftgr = new GlideRecord("x_307427_now_onb_0_candidate");
+        ftgr.addQuery("user", gs.getUserID());
+        ftgr.query();
+        if (ftgr.next()) {
+           return {user:ftgr.user.getDisplayValue(), userImg:"/" + ftgr.user.photo + ".iix", manager: ftgr.user.getDisplayValue(), 
+            program: this.getUserProgramName(),start_day: ftgr.getValue("starting_date"),end_day:ftgr.getValue("end_date")};
+        }
+        
+        return [];
+    },
+
+    getAllCandidate:function(){
+        var cnd=[];
+        var ftgr = new GlideRecord("x_307427_now_onb_0_candidate");
+        ftgr.query();
+        while (ftgr.next()) {
+            cnd.push( {user:ftgr.user.getDisplayValue(), userImg:"/" + ftgr.user.photo + ".iix", manager: ftgr.user.getDisplayValue(), 
+            program: this.getUserProgramNameA(ftgr.user),start_day: ftgr.getValue("starting_date"),end_day:ftgr.getValue("end_date")});
+        }
+        
+        return cnd;
+    },
+
+    calculateScore:function(userId){
+        var ftgr = new GlideRecord("x_307427_now_onb_0_candidate");
+        ftgr.addQuery("user", userId);
+        ftgr.query();
+        if (ftgr.next()) {
+           var tot = this.getTrackArticles().length;
+           gs.info(tot)
+           var prog= ftgr.getValue("score");
+        }
+        
+        return (prog * 100) / tot;
+    },
+
+    getScoreTopic:function(){
+        var ftgr = new GlideRecord("x_307427_now_onb_0_candidate");
+        ftgr.addQuery("user", gs.getUserID());
+        ftgr.query();
+        if (ftgr.next()) {
+           return ftgr.getValue("progress");
+        }
+        
+        return null;
+    },
+
+    isTopicDone:function(topicTitle){
+        var ftgr = new GlideRecord("x_307427_now_onb_0_candidate");
+        ftgr.addQuery("user", gs.getUserID());
+        ftgr.query();
+        if (ftgr.next()) {
+           return ftgr.getValue("progress")
+           ?ftgr.getValue("progress").search(topicTitle) != -1
+           :false;
+        }
+        
+        return false;
+    },
+
+    setProgress:function(userId, team, article, score){
+        userId= !userId ? this.getParameter('sysparam_userId'): null;
+        team= !team ? this.getParameter('sysparam_team'): null;
+        article= !article ? this.getParameter('sysparam_article'): null;
+        score= !score ? this.getParameter('sysparam_score'): null;
+
+        var ftgr = new GlideRecord("x_307427_now_onb_0_candidate");
+        ftgr.addQuery("user", userId);
+        ftgr.query();
+        if (ftgr.next()) {
+          /* ftgr.progress = "";
+           ftgr.setValue("score", 0);*/
+
+          ftgr.progress += "," + JSON.stringify({title:article, team: team});
+           ftgr.score += +score;
+           ftgr.update();
+        }
+
+       return ftgr.isValidRecord()? true: false;
+    },
+
+    type: 'nowOnboardingUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-19 17:54:51</sys_created_on>
+        <sys_id>bf2798e397d51110e300d200f153af4b</sys_id>
+        <sys_name>nowOnboardingUtils</sys_name>
+        <sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope>
+        <sys_update_name>sys_script_include_bf2798e397d51110e300d200f153af4b</sys_update_name>
+    </sys_script_include>
+</record_update>

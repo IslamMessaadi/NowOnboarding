@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="4dac661397511110e300d200f153af03" label="Team" max_length="40" name="x_307427_now_onb_0_team" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Product Owner" max_length="32" name="product_owner" reference="sys_user" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element label="Responsable Contact" mandatory="true" max_length="32" name="responsable_contact" reference="sys_user" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element label="Short Description" max_length="500" name="short_description" type="string"/>
+        <element display="true" label="Title" mandatory="true" max_length="150" name="title" type="string"/>
+        <index name="index">
+            <element name="product_owner"/>
+        </index>
+        <index name="index2">
+            <element name="responsable_contact"/>
+        </index>
+    </element>
+</database>

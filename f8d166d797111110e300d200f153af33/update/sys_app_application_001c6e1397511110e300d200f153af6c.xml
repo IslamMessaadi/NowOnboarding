@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>Now Onboarding</name>
+        <order>100</order>
+        <roles>x_307427_now_onb_0.team.admin,x_307427_now_onb_0.scrum.admin,x_307427_now_onb_0.candidate,x_307427_now_onb_0.admin</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-19 10:04:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>001c6e1397511110e300d200f153af6c</sys_id>
+        <sys_name>Now Onboarding</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope>
+        <sys_update_name>sys_app_application_001c6e1397511110e300d200f153af6c</sys_update_name>
+        <title>Now Onboarding</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>

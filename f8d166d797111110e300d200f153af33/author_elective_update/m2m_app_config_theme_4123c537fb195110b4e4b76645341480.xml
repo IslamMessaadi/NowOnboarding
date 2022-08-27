@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme">
+    <m2m_app_config_theme action="DELETE">
+        <applicability display_value="Public">4923c5376a1951101b6016e0f3aedd7f</applicability>
+        <order>0</order>
+        <sys_class_name>m2m_app_config_theme</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-08-20 15:43:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4123c537fb195110b4e4b76645341480</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope>
+        <sys_update_name>m2m_app_config_theme_4123c537fb195110b4e4b76645341480</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-20 15:43:17</sys_updated_on>
+        <theme display_value="Light Theme">c923c537fd195110120d45640a779e7f</theme>
+        <ux_app_configuration display_value="">7823c53797195110e300d200f153af51</ux_app_configuration>
+    </m2m_app_config_theme>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Onboarding">f8d166d797111110e300d200f153af33</application>
+        <file_path/>
+        <instance_id>01c7d3f4dbea841407072f17d4961976</instance_id>
+        <instance_name>dev97381</instance_name>
+        <name>m2m_app_config_theme_4123c537fb195110b4e4b76645341480</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme"><m2m_app_config_theme action="INSERT_OR_UPDATE"><applicability display_value="Public">4923c5376a1951101b6016e0f3aedd7f</applicability><order>0</order><sys_class_name>m2m_app_config_theme</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-08-20 15:43:17</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>4123c537fb195110b4e4b76645341480</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package><sys_policy/><sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope><sys_update_name>m2m_app_config_theme_4123c537fb195110b4e4b76645341480</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-08-20 15:43:17</sys_updated_on><theme display_value="Light Theme">c923c537fd195110120d45640a779e7f</theme><ux_app_configuration display_value="">7823c53797195110e300d200f153af51</ux_app_configuration></m2m_app_config_theme></record_update>]]></payload>
+        <payload_hash>-191932049</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>5970b52397011110e300d200f153af46</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-08-07 14:07:05</sys_created_on>
+        <sys_id>9c9945fb97195110e300d200f153af50</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18278a17b280000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>UX App Theme</type>
+        <update_guid>5c9945fbef195110f1e60a39dd544750</update_guid>
+        <update_guid_history>5c9945fbef195110f1e60a39dd544750:-191932049</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">949945fb97195110e300d200f153af52</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-20 16:11:20</sys_created_on>
+        <sys_db_object display_value="" name="m2m_app_config_theme">m2m_app_config_theme</sys_db_object>
+        <sys_id>078a9e2002994bea8d145cd70634c3c1</sys_id>
+        <sys_metadata>4123c537fb195110b4e4b76645341480</sys_metadata>
+        <sys_name/>
+        <sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope>
+        <sys_scope_delete display_value="">2a2e9e1452574e349b8eafc3098c2649</sys_scope_delete>
+        <sys_update_name>m2m_app_config_theme_4123c537fb195110b4e4b76645341480</sys_update_name>
+        <sys_update_version display_value="m2m_app_config_theme_4123c537fb195110b4e4b76645341480">9c9945fb97195110e300d200f153af50</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

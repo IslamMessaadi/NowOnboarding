@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_registry">
+    <sys_ux_page_registry action="DELETE">
+        <active>true</active>
+        <admin_panel>7823c53797195110e300d200f153af51</admin_panel>
+        <admin_panel_table>sys_ux_app_config</admin_panel_table>
+        <auth_routes/>
+        <page/>
+        <parent_app/>
+        <path>candidate</path>
+        <root_macroponent display_value="Portal App Shell">b66bf1075b31101016fd7c1bf481c7a7</root_macroponent>
+        <sys_class_name>sys_ux_page_registry</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-08-20 15:43:19</sys_created_on>
+        <sys_id>4123c537f01951107f4bafd604b7296d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>candidate</sys_name>
+        <sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope>
+        <sys_update_name>sys_ux_page_registry_4123c537f01951107f4bafd604b7296d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-20 16:10:18</sys_updated_on>
+        <title>candidate</title>
+    </sys_ux_page_registry>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Onboarding">f8d166d797111110e300d200f153af33</application>
+        <file_path/>
+        <instance_id>01c7d3f4dbea841407072f17d4961976</instance_id>
+        <instance_name>dev97381</instance_name>
+        <name>sys_ux_page_registry_4123c537f01951107f4bafd604b7296d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_registry"><sys_ux_page_registry action="INSERT_OR_UPDATE"><active>true</active><admin_panel>7823c53797195110e300d200f153af51</admin_panel><admin_panel_table>sys_ux_app_config</admin_panel_table><auth_routes/><page/><parent_app/><path>candidate</path><root_macroponent display_value="Portal App Shell">b66bf1075b31101016fd7c1bf481c7a7</root_macroponent><sys_class_name>sys_ux_page_registry</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-08-20 15:43:19</sys_created_on><sys_id>4123c537f01951107f4bafd604b7296d</sys_id><sys_mod_count>1</sys_mod_count><sys_name>candidate</sys_name><sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package><sys_policy/><sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope><sys_update_name>sys_ux_page_registry_4123c537f01951107f4bafd604b7296d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-20 16:10:18</sys_updated_on><title>candidate</title></sys_ux_page_registry></record_update>]]></payload>
+        <payload_hash>-355058328</payload_hash>
+        <record_name>candidate</record_name>
+        <reverted_from/>
+        <source>49d166d797111110e300d200f153af35</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-20 16:10:18</sys_created_on>
+        <sys_id>d5594dbb97195110e300d200f153af51</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182bc04f8e50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-20 16:10:18</sys_updated_on>
+        <type>UX Application</type>
+        <update_guid>11594dbbd0195110224f5bfdabb0c051</update_guid>
+        <update_guid_history>11594dbbd0195110224f5bfdabb0c051:-355058328,59594dbbb0195110903659366ac0bd4f:478333468</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-20 16:11:13</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_page_registry">sys_ux_page_registry</sys_db_object>
+        <sys_id>09f7bce4ba6b4acc82c727eb2f678904</sys_id>
+        <sys_metadata>4123c537f01951107f4bafd604b7296d</sys_metadata>
+        <sys_name>candidate</sys_name>
+        <sys_package display_value="Now Onboarding" source="x_307427_now_onb_0">f8d166d797111110e300d200f153af33</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Onboarding">f8d166d797111110e300d200f153af33</sys_scope>
+        <sys_scope_delete display_value="">2a2e9e1452574e349b8eafc3098c2649</sys_scope_delete>
+        <sys_update_name>sys_ux_page_registry_4123c537f01951107f4bafd604b7296d</sys_update_name>
+        <sys_update_version display_value="sys_ux_page_registry_4123c537f01951107f4bafd604b7296d">d5594dbb97195110e300d200f153af51</sys_update_version>
+    </sys_metadata_delete>
+</record_update>
