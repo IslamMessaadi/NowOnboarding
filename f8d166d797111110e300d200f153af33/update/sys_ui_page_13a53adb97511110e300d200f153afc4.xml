@@ -11,6 +11,15 @@
     ga.getXMLWait();
     var answer = ga.getAnswer();
 	location.reload();
+}
+
+
+function resetScore() {
+    var ga = new GlideAjax('nowOnboardingUtils');
+    ga.addParam('sysparm_name', 'resetProgress');
+    ga.getXMLWait();
+    var answer = ga.getAnswer();
+	location.reload();
 }]]></client_script>
         <description/>
         <direct>false</direct>
@@ -45,23 +54,19 @@
 			  <div class="col-4 text-center">
 				  <img src="${details.userImg}" class="rounded-circle mb-3" style="width: 150px;"
 				  alt="Avatar" />
-  
 				  <h4 class="mb-2"><strong>${details.user}</strong></h4>
-				  <p class="text-muted">${details.program}</p>
-				  <p class="text-primary">Onboarding Period: ${details.start_day} to ${details.end_day}</p>
-				  <div class="progress" style="height: 15px;">
-					<div class="progress-bar bg-success" role="progressbar" style="width: ${progress}%" aria-valuemin="0" aria-valuemax="100">
-						<span class="font-monospace">${progress}%</span>
-					</div>
-				  </div>
-  
+				  <p style="font-size: larger;">${details.program}</p>
+				  <p class="badge badge-danger w-50" 
+				  type="submit" 
+				  style="font-size: larger;"
+				  onclick="return resetScore();">${gs.getMessage('Reset')}</p>
 			  </div>
 			  <div class="col-8">
   
-				  <table class="table align-middle mb-0 bg-white">
-					  <thead class="bg-light">
+				  <table class="table table-group-divider table-light">
+					  <thead>
 						<tr style="font-size: medium;">
-						  <th scope="col">No.</th>
+						  <th scope="col">${gs.getMessage('No.')}</th>
 						  <th>${gs.getMessage('Link')}</th>
 						  <th>${gs.getMessage('Team')}</th>
 						  <th>${gs.getMessage('Action')}</th>
@@ -74,7 +79,9 @@
 							  <tr>
 								  <th scope="row">${jvar_tr_index + 1}</th>
 								  <td><a href="x_307427_now_onb_0_article.do?sys_id=${jvar_article.sys_id}" target="_blank">${jvar_article.name}</a></td>
-								  <td>${jvar_article.topic}</td>
+								  <td>
+									<p class="badge badge-info m-0 w-100">${jvar_article.topic}</p>
+								  </td>
 								  
 								  <td>
 									<j:set var="jvar_isDone" value="${jvar_article.isdone}"/>
@@ -82,14 +89,14 @@
 
 									<j:if test="${!jvar_isDone}">
 										<p  type="submit" 
-											class="badge badge-danger m-0 text-dark" 
+											class="badge bg-danger m-0 w-100" 
 											onclick="return setAsDone('${gs.getUserID()}', '${jvar_article.topic}', '${jvar_article.name}', 1);">
 											Mark It Done
 										</p>
 									</j:if>
 
 									<j:if test="${jvar_isDone}">
-										<p class="badge badge-success m-0 text-dark">Done</p>
+										<p class="badge bg-success m-0 w-100 bg-opacity-50">Done</p>
 									</j:if>
 								  </td>
 							  </tr>
@@ -97,10 +104,37 @@
 						  </j:forEach> 
   
 					  </tbody>
-					</table>
+				  </table>
+
+				  <div class="card">
+					<ul class="list-group list-group-light list-group-small">
+					  <li class="list-group-item px-3" style="font-size: initial;">
+						<p>Manager: ${details.manager}</p> 
+					  </li>
+
+					  <li class="list-group-item px-3" style="font-size: initial;">
+						<p>Onboarding Period: ${details.start_day} to ${details.end_day}</p> 
+					  </li>
+					  <li class="list-group-item px-3">
+						<div class="progress" style="height: 15px;">
+							<div class="progress-bar" role="progressbar" style="width: ${progress}%" aria-valuemin="0" aria-valuemax="100">
+								<span class="font-monospace">${progress}%</span>
+							</div>
+						  </div>
+					  </li>
+					</ul>
+				  </div>
 			  </div>
+		   </div>
+	    </div>
+
+		<footer class="bg-dark fixed-bottom text-center text-lg-start text-white" style="font-size: 1.5em;font-weight: 600;">
+			<!-- Copyright -->
+			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+			   <i class="fa-2x fa-person-snowboarding fa-solid mx-3"></i> ServiceNow Onboarding Application
 			</div>
-	  </div>
+			<!-- Copyright -->
+		</footer>
 	</j:if>
 
 

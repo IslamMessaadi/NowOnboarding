@@ -97,7 +97,7 @@ nowOnboardingUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         ftgr.addQuery("user", gs.getUserID());
         ftgr.query();
         if (ftgr.next()) {
-           return {user:ftgr.user.getDisplayValue(), userImg:"/" + ftgr.user.photo + ".iix", manager: ftgr.user.getDisplayValue(), 
+           return {user:ftgr.user.getDisplayValue(), userImg:"/" + ftgr.user.photo + ".iix", manager: ftgr.manager.getDisplayValue(), 
             program: this.getUserProgramName(),start_day: ftgr.getValue("starting_date"),end_day:ftgr.getValue("end_date")};
         }
         
@@ -172,6 +172,17 @@ nowOnboardingUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         }
 
        return ftgr.isValidRecord()? true: false;
+    },
+
+    resetProgress:function(){
+        var ftgr = new GlideRecord("x_307427_now_onb_0_candidate");
+        ftgr.addQuery("user", gs.getUserID());
+        ftgr.query();
+        if (ftgr.next()) {
+           ftgr.progress = "";
+           ftgr.setValue("score", 0);
+           ftgr.update();
+        }
     },
 
     type: 'nowOnboardingUtils'
